@@ -337,6 +337,7 @@ GameObject:
   - component: {fileID: 1549761815}
   - component: {fileID: 1549761814}
   - component: {fileID: 1549761818}
+  - component: {fileID: 1549761819}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -435,6 +436,25 @@ MonoBehaviour:
   id: -1
   manager: {fileID: 0}
   mouseOver: 0
+--- !u!95 &1549761819
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549761813}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 267e68e51098af64cb86af9d196f1590, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1931326155
 GameObject:
   m_ObjectHideFlags: 0

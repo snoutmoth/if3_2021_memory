@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7554057340795199437}
   - component: {fileID: 142125682970127637}
   - component: {fileID: 2963717553761265457}
+  - component: {fileID: 1529061283860546642}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -109,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e28616202ea13d4fac03ca1918852cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: -1
+  id: -1
   manager: {fileID: 0}
   mouseOver: 0
 --- !u!114 &2963717553761265457
@@ -125,10 +126,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   row: 3
-  col: 4
+  column: 4
   gapRow: 1.5
-  gapCol: 1.5
+  gapColumn: 1.5
+  timeBeforeReset: 1
   itemPrefab: {fileID: 8036465359654052807}
   materials: []
+  defaultMaterial: {fileID: 0}
   items: []
   selected: 
+  matches: 
+  whenPlayerWins:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!95 &1529061283860546642
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8036465359654052807}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 267e68e51098af64cb86af9d196f1590, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
