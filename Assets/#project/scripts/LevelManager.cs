@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class LevelManager : MonoBehaviour
 {
-    public int row = 3;
-    public int column = 4;
+    private int row; //private : l'inspecteur n'y a plus accès
+    private int column;
     public float gapRow = 1.5f;
     public float gapColumn = 1.5f;
     [Range(0f, 5f)]
@@ -21,10 +21,14 @@ public class LevelManager : MonoBehaviour
     public List<int> matches = new List<int>();
     private Dictionary <int, Material> itemMaterial = new Dictionary<int, Material>();
     public UnityEvent whenPlayerWins;
+    private float timer = 0f;
     
     
     void Start()
-    {
+    {   
+        row = PlayerPrefs.GetInt("row", 3);
+        column = PlayerPrefs.GetInt("col", 4);
+
         items = new ItemBehavior[row * column];
         int index = 0;
 
@@ -97,6 +101,9 @@ public class LevelManager : MonoBehaviour
     }
     void Update()
     {
+        timer += Time.deltaTime;
+        
+
         if (selected.Count == 2) {
             if (itemMaterial[selected[0]] == itemMaterial[selected[1]]) {
                 matches.Add(selected[0]);
@@ -104,7 +111,8 @@ public class LevelManager : MonoBehaviour
                 items[selected[0]].HasBeenMatched();
                 items[selected[1]].HasBeenMatched();
 
-                if(matches.Count >= row * column){
+                if(matches.Count >= row * column){ //condition qui vérifie si on a gagné
+                    PlayerPrefs.SetFloat("timer", timer); //et donc, on prend le chrono au moment où le jeu s'arrête (gagné) !!!
                     StartCoroutine(Win());
                 }
             }
@@ -115,5 +123,8 @@ public class LevelManager : MonoBehaviour
             }
             selected.Clear();
         }
+
+        
+    
     }
 }

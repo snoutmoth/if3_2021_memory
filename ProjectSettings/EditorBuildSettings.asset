@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Scenes/HardSampleScene.unity
+    guid: 5e0d5023600fca34b9eafc22e3cbfabc
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: de21669d039e7d8468e8fc3839fff716

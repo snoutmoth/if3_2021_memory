@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   row: 3
-  column: 4
+  column: 2
   gapRow: 1.5
   gapColumn: 1.5
   timeBeforeReset: 1
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 1549761818}
   - component: {fileID: 1549761819}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cube0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
